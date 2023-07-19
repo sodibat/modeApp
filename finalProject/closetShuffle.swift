@@ -12,6 +12,7 @@ struct closetShuffle: View {
     @State private var randomIndex = Int.random(in: 0..<3)
     
     var body: some View {
+        
         NavigationStack {
             VStack {
                 Text("CLOSET SHUFFLE")
@@ -22,10 +23,12 @@ struct closetShuffle: View {
                         .font(.title)
                         .fontWeight(.ultraLight)
                         .foregroundColor(Color.purple)
+                        .padding(.leading)                        
+                    
                     Image(shirts[randomIndex])
                         .resizable()
                         .aspectRatio(contentMode: .fit)
-                        .padding()
+                        .padding(.leading)
                     
                     Button(action: {
                         self.randomIndex = Int.random(in: 0..<shirts.count) }) {
@@ -35,7 +38,7 @@ struct closetShuffle: View {
                         .foregroundColor(.black)
                         .padding()
                         .background(Color.yellow.opacity(0.5))
-                    cornerRadius(30)
+                        .cornerRadius(30)
                 }
             }
         }

@@ -13,7 +13,15 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
                    VStack {
-
+                       Text("HOME")
+                           .font(.largeTitle)
+                           .fontWeight(.ultraLight)
+                           .foregroundColor(Color.black)
+                       }
+                           NavigationLink(destination: myGallery() ) {
+                               Text("My Gallery")
+                                   .font(.title2)
+                                   .foregroundColor(Color.green)
 
                    }
                }
