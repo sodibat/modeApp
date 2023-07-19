@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct closetShuffle: View {
-    let shirts = ["teeShirt", "grayShirt", "blouseShirt"]
-    @State private var randomIndex = Int.random(in: 0..<3)
+    let shirts = ["navyShirt", "blackShirt", "pinkShirt", "stripedShirt", "whiteShirt"]
+    let shoes = ["loaferShoes", "converseShoes", "nikeShoes", "balanceShoes", "sketchersShoes"]
+    @State private var randomIndex = Int.random(in: 0..<5)
     
     var body: some View {
         
