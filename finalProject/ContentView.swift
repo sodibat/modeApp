@@ -9,26 +9,12 @@ import SwiftUI
 import CoreData
 
 struct ContentView: View {
-    @State private var randomIndex = Int.random(in: 0..<5)
+    @State private var randomIndex = Int.random(in: 0..<3)
     var body: some View {
         NavigationStack {
-            let images = ["shirt1", "shirt2", "shirt3"]
                    VStack {
-                       Image(images[randomIndex])
-                           .resizable()
-                           .aspectRatio(contentMode: .fit)
-                           .padding()
-                       
-                       Button(action: {
-                           self.randomIndex = Int.random(in: 0..<images.count)
-                       }) {
-                           Text("Randomize")
-                               .fontWeight(.light)
-                       }
-                       .foregroundColor(.black)
-                       .padding()
-                       .background(Color.yellow.opacity(0.5))
-                       .cornerRadius(30)
+
+
                    }
                }
            }
