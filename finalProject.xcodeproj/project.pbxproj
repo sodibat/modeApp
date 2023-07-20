@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD3EC53D2A698A3B0098586E /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3EC53C2A698A3B0098586E /* ImagePicker.swift */; };
 		BD828B352A672286005774BC /* finalProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD828B342A672286005774BC /* finalProjectApp.swift */; };
 		BD828B372A672286005774BC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD828B362A672286005774BC /* ContentView.swift */; };
 		BD828B392A672286005774BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD828B382A672286005774BC /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BD3EC53C2A698A3B0098586E /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		BD828B312A672286005774BC /* finalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = finalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD828B342A672286005774BC /* finalProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = finalProjectApp.swift; sourceTree = "<group>"; };
 		BD828B362A672286005774BC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				BD828B472A672658005774BC /* closetShuffle.swift */,
 				BD84EC2A2A67298D00171B95 /* myGallery.swift */,
 				BD84EC2C2A672A4F00171B95 /* addNewItem.swift */,
+				BD3EC53C2A698A3B0098586E /* ImagePicker.swift */,
 				BD828B382A672286005774BC /* Assets.xcassets */,
 				BD828B3D2A672286005774BC /* Persistence.swift */,
 				BD828B3F2A672286005774BC /* finalProject.xcdatamodeld */,
@@ -157,6 +160,7 @@
 				BD828B3E2A672286005774BC /* Persistence.swift in Sources */,
 				BD828B372A672286005774BC /* ContentView.swift in Sources */,
 				BD828B412A672286005774BC /* finalProject.xcdatamodeld in Sources */,
+				BD3EC53D2A698A3B0098586E /* ImagePicker.swift in Sources */,
 				BD84EC2B2A67298D00171B95 /* myGallery.swift in Sources */,
 				BD828B352A672286005774BC /* finalProjectApp.swift in Sources */,
 			);
@@ -289,6 +293,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"finalProject/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need to access this camera to allow the user to take images of their clothing.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -317,6 +322,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"finalProject/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need to access this camera to allow the user to take images of their clothing.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
