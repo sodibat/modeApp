@@ -13,43 +13,51 @@ struct closetShuffle: View {
   @State private var randomIndex = Int.random(in: 0..<5)
   var body: some View {
     NavigationStack {
-      VStack {
-          Text("CLOSET SHUFFLE")
+        ZStack{
+            Image("greenBack")
+                .resizable()
+                .ignoresSafeArea()
+            VStack {
+                Text("CLOSET SHUFFLE")
           .font(.title)
           .fontWeight(.ultraLight)
-        NavigationLink(destination: myGallery()) {
-          Text("My Gallery")
-            .font(.title)
-            .fontWeight(.ultraLight)
-            .foregroundColor(Color.purple)
-            .padding(.leading)
-          Button(action: {
+          .padding(.top, 70.0)
+                NavigationLink(destination: myGallery()) {
+                    Text("My Gallery")
+                        .font(.title)
+                        .fontWeight(.light)
+                        .foregroundColor(Color(hue: 0.355, saturation: 0.519, brightness: 0.449))
+                    .padding(.leading) }
+                VStack {
+                    Button(action: {
             self.randomIndex = Int.random(in: 0..<shirts.count) }) {
-              Text("Randomize")
+              Text("Shuffle")
                 .fontWeight(.light)
             }
             .foregroundColor(.black)
             .padding()
-            .background(Color.yellow.opacity(0.5))
+            .background(Color(hue: 0.317, saturation: 0.424, brightness: 0.877))
             .cornerRadius(30)
-          VStack {
-            Image(accessories[randomIndex])
-              .resizable()
-              .aspectRatio(contentMode: .fit)
-              .padding(.leading)
-            Image(shirts[randomIndex])
-              .resizable()
-              .aspectRatio(contentMode: .fit)
-              .padding(.leading)
-            Image(bottoms[randomIndex])
-              .resizable()
-              .aspectRatio(contentMode: .fit)
-            Image(shoes[randomIndex])
-              .resizable()
-              .aspectRatio(contentMode: .fit)
-              .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+            VStack {
+                Image(accessories[randomIndex])
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .padding(.leading)
+                Image(shirts[randomIndex])
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .padding(.leading)
+                Image(bottoms[randomIndex])
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                Image(shoes[randomIndex])
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+            }
           }
-        }
+      }
+      .ignoresSafeArea()
       }
     }
   }

@@ -13,20 +13,24 @@ struct addNewItem: View {
     @State private var sourceType: UIImagePickerController.SourceType = .photoLibrary
     var body: some View {
         NavigationStack {
-            VStack {
-                Image(uiImage: selectedImage ?? UIImage(named: "cameraImage")!)
-                HStack {
-                    Button("Select Image") {
-                        self.sourceType = .photoLibrary
-                        isImagePickerShowing = true
+            ZStack{
+                Image("greenBack")
+                    .resizable()
+                VStack {
+                    Image(uiImage: selectedImage ?? UIImage(named: "cameraImage")!)
+                    HStack {
+                        Button("Select Image") {
+                            self.sourceType = .photoLibrary
+                            isImagePickerShowing = true
+                        }
+                        .padding(.horizontal, 40.0)
+                        Button("Take Image") {
+                            self.sourceType = .camera
+                            isImagePickerShowing = true
+                        }
+                        .padding(/*@START_MENU_TOKEN@*/.horizontal, 40.0/*@END_MENU_TOKEN@*/)
+                        
                     }
-                    .padding(.horizontal, 40.0)
-                    Button("Take Image") {
-                        self.sourceType = .camera
-                        isImagePickerShowing = true
-                    }
-                    .padding(/*@START_MENU_TOKEN@*/.horizontal, 40.0/*@END_MENU_TOKEN@*/)
-                    
                 }
             }
         }
