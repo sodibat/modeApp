@@ -93,12 +93,13 @@ struct myGallery: View {
                 Image("nikeShoes")
                               .resizable(resizingMode: .stretch)
                               .frame(width: 70, height: 70)
-                
                           }
                           }
                       }
                     }
+
                   }
+    
                 }
 
 
